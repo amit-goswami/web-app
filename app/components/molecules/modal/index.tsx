@@ -1,7 +1,7 @@
 import { Fragment, MouseEvent, useRef } from 'react'
 import { Container } from '../../atoms/container'
 import { Text } from '../../atoms/text'
-import { useClickOutside } from '@/app/features/shared/hooks'
+// import { useClickOutside } from '@/app/features/shared/hooks'
 
 type ModalProps = {
   isOpen: boolean
@@ -11,14 +11,14 @@ type ModalProps = {
 }
 
 export const Modal = ({ isOpen, title, content, onClose }: ModalProps) => {
-  const modalRef = useRef(null)
+  // const modalRef = useRef(null)
 
   const handleCloseModal = (e: MouseEvent) => {
     e.stopPropagation()
     onClose()
   }
 
-  useClickOutside(modalRef, onClose)
+  // useClickOutside(modalRef, onClose)
 
   return (
     <Fragment>
@@ -32,7 +32,7 @@ export const Modal = ({ isOpen, title, content, onClose }: ModalProps) => {
               <Container className="absolute inset-0 bg-gray-500 opacity-75"></Container>
             </Container>
             <div
-              ref={modalRef}
+              // ref={modalRef}
               className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
             >
               <Container className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">

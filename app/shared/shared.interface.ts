@@ -16,3 +16,16 @@ export enum HTTP_STATUS_CODE {
   UPDATED = 200,
   CONFLICT = 409
 }
+
+export enum UPDATE_TYPE {
+  ADD = 'ADD',
+  UPDATE = 'UPDATE'
+}
+
+export interface IContent {
+  _id: string
+  contentId: string
+  content: string
+  updateCount: number
+  addCount: number
+}
