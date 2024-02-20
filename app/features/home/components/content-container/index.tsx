@@ -11,7 +11,7 @@ import { Modal } from '@/app/components/molecules/modal'
 import { CreateFormModal } from '../create-form-modal'
 
 const validationSchema = Joi.object({
-  updatedCount: Joi.number().required(),
+  updateCount: Joi.number().required(),
   addCount: Joi.number().required(),
   formContent: Joi.string().required()
 })
@@ -76,9 +76,9 @@ export const ContentContainer = ({
             getFormData={submitForm}
             className="flex flex-col gap-4 w-1/1"
           >
-            <FormInput name="content" label="Form Content" />
-            <FormInput name="updatedCount" label="Update Count" />
-            <FormInput name="addCount" label="Add Count" />
+            <FormInput name="content" label="Form Content" disabled />
+            <FormInput name="updateCount" label="Update Count" disabled />
+            <FormInput name="addCount" label="Add Count" disabled />
           </Form>
         )}
       </Container>

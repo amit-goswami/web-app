@@ -15,7 +15,6 @@ const createConent = async (createContentPayload: ICreateContentPayload) => {
     content,
     updateType
   })
-  console.log('data', data)
   return data.contents as IContent
 }
 
